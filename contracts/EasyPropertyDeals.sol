@@ -113,7 +113,7 @@ function buyProperty(uint256 _propertyId, uint256 _propertyPrice)
     // Transfer ownership to the buyer and delist the property
     address previousOwner = property.owner;
     property.owner = msg.sender;
-    property.isListed = false; 
+    property.isListed = false;
 
     // Emit necessary events
     emit PaymentReceived(_propertyId, msg.sender, msg.value);
